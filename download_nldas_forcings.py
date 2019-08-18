@@ -118,9 +118,8 @@ def download_files_from_url(urls, output_dir):
     for the list of urls for the files we wish to retrieve
     """
     responses = []
-    #for i in tqdm.tqdm(range(1000)):
-
-    # or other long operations
+   
+    # display progress bar (thanks tqdm!) and download the files
     for url in tqdm.tqdm(urls, ncols=80):
         # extract the filename from the url to be used when saving the file
         filename = url[url.rfind('/')+1:]
