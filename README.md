@@ -39,3 +39,8 @@ to use the included environment.yml files
 ```bash
 $ conda env create --file environment.yml
 ```
+
+## Troubleshooting
+
+If you are getting HTTP back (~3KB) instead of grib files (~1.8MB), make sure you have added the application "NASA GESDISC DATA ARCHIVE" 
+in your https://urs.earthdata.nasa.gov account under applications>authorized apps
