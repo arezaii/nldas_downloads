@@ -1,4 +1,5 @@
 name: nldas_downloader
 dependencies:
-  - requests=2.22.0
-  - tqdm=4.32.1
+  - requests
+  - tqdm
+  - python-dateutil
