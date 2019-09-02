@@ -1,5 +1,6 @@
 # NLDAS2 Data Bulk Downloader
 python script to bulk download NLDAS files from https://hydro1.gesdisc.eosdis.nasa.gov/data/NLDAS
+
 can download hourly or monthly data
 
 ## Requirements
