@@ -7,6 +7,7 @@ can download hourly or monthly data
 * python 3.7
 * requests
 * tqdm
+* dateutil
 
 ## Usage
 usage: download_nldas_forcings.py [-h] --from_date FROM_DATE --to_date TO_DATE
