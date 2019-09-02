@@ -1,5 +1,6 @@
-# NLDAS2 Hourly Data Bulk Downloader
-python script to bulk download NLDAS hourly files from https://hydro1.gesdisc.eosdis.nasa.gov/data/NLDAS/NLDAS_FORA0125_H.002/
+# NLDAS2 Data Bulk Downloader
+python script to bulk download NLDAS files from https://hydro1.gesdisc.eosdis.nasa.gov/data/NLDAS
+can download hourly or monthly data
 
 ## Requirements
 * python 3.7
@@ -7,22 +8,24 @@ python script to bulk download NLDAS hourly files from https://hydro1.gesdisc.eo
 * tqdm
 
 ## Usage
-download_nldas_forcings.py <FromDate YYYY-MM-DD> <ToDate YYYY-MM-DD> <username> <password> <output dir>
-									[-h] [-o, --output_dir OUTPUT_DIR]
-									from_date to_date username password
-  
-  the following arguments are required: from_date, to_date, username, password
+usage: download_nldas_forcings.py [-h] --from_date FROM_DATE --to_date TO_DATE
+                                  --username USERNAME --password PASSWORD
+                                  [--output_dir OUTPUT_DIR] [--hourly]
+                                  [--monthly]
+				  
+the following arguments are required: --from_date/-fd, --to_date/-td, --username/-u, --password/-p
+
   
 ex: 
 
 ```bash
-$ python download_nldas_forcings.py 2011-08-01 2012-08-01 username password 
+$ python download_nldas_forcings.py -fd=2011-08-01 -td=2012-08-01 -u=username -p=password -H
 ```
 
 ## Description
-Given a start date and end date, create links for each of the hourly forcings data files.
+Given a start date and end date, create either hourly or monthly links for each of the forcings data files.
 
-Create a session to the https NASA data server at https://hydro1.gesdisc.eosdis.nasa.gov/data/NLDAS/NLDAS_FORA0125_H.002/
+Create a session to the https NASA data server at https://hydro1.gesdisc.eosdis.nasa.gov/data/NLDAS/
 
 Download each of the grib (.grb) files to ./nldas-from_date.to.to_date
 ex:
@@ -31,7 +34,7 @@ ex:
 User can specify output directory by specifying with -o flag
 ex:
 ```bash
-$ python download_nldas_forcings.py 2011-08-01 2012-08-01 username password -o nldas_downloads
+$ python download_nldas_forcings.py -fd 2011-08-01 -td 2012-08-01 -u username -p password -H -o nldas_downloads
 ```
 
 ## Anaconda environment setup
