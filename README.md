@@ -49,3 +49,10 @@ $ conda env create --file environment.yml
 
 If you are getting HTTP back (~3KB) instead of grib files (~1.8MB), make sure you have added the application "NASA GESDISC DATA ARCHIVE" 
 in your https://urs.earthdata.nasa.gov account under applications>authorized apps
+
+## Testing
+
+To run the unittest test suite:
+```bash
+$ python download_nldas_forcings_tests.py
+```
